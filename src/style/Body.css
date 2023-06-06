@@ -1,11 +1,6 @@
 body{
     margin: 0;
 }
-/* .dark{
-
-    font-size: xx-large;
-
-} */
 .container{
     max-width: 1200px;
     display: grid; 
@@ -14,6 +9,7 @@ body{
     /* gap: 5px; */
     margin: auto;
     transition: 1.1s;
+    justify-content: center;
 }
 
 .card{
@@ -22,7 +18,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 180px;
 }
 .car-dark{
     background: var(--dark-box-bg);
@@ -93,8 +88,6 @@ body{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 280px;
-    height: 280px; */
     overflow: hidden;
     cursor: pointer;
 }
@@ -147,13 +140,11 @@ body{
     grid-column: 1/2; */
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
-    /* width: 280px;
-    height: 280px; */
     overflow: hidden;
     background: #ff8080;
 }
 .resume_icon{
-    max-width: 30%;
+    max-width: 48%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -167,8 +158,6 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 280px;
-    height: 580px; */
     overflow: hidden;
 }
 
@@ -178,8 +167,6 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 280px;
-    height: 280px; */
     overflow: hidden;
     background: #0077B5;
 }
@@ -190,8 +177,6 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 280px;
-    height: 580px; */
     overflow: hidden;
 }
 
@@ -201,16 +186,12 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 280px;
-    height: 280px; */
     overflow: hidden;
 }
 .MapBox{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 580px;
-    height: 280px; */
     overflow: hidden; 
 }
 .mapclass{
@@ -222,8 +203,6 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 580px;
-    height: 280px; */
     overflow: hidden; 
     flex-direction: column; 
     position: relative;
@@ -254,31 +233,134 @@ a{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
-    /* width: 580px;
-    height: 280px; */
     overflow: hidden;
 }
-
-
 @media screen and (max-width: 400px) {
     .container{
         max-width: 390px;
-        display: flex; 
-        flex-direction: column; 
-        flex-wrap: wrap;
-        margin: auto;
-       
     }
     .card{
         height: 360px;
+        width: 360px;
+    }
+    .card2 , .resumeBox{
+        width: 170px;
+        height: 180px;
+    }
+}
+@media screen and (min-width: 401px)and (max-width: 540px) {
+    .container{
+        max-width: 390px;
+    }
+    .card{
+        height: 400px;
+        width: 400px;
+    }
+    .card2 , .resumeBox{
+        width: 170px;
+        height: 180px;
+    }
+}
+@media screen and (min-width: 541px)and (max-width: 800px) {
+    .container{
+        max-width: 590px;
+    }
+    .card{
+        height: 400px;
+        width: 400px;
+    } 
+    .card2 , .resumeBox{
+        width: 184px;
+        height: 180px;
+    }
+}
+@media screen and (min-width: 800px)and (max-width: 1000px) {
+   .container{
+      max-width: 800px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      flex-wrap: wrap;
+
+    }
+    .card{
+        height: 350px;
+        width: 350px;
+    } 
+    .card1-into{
+        font-size: 24px;
+        line-height: 24px;
+        width: -webkit-fill-available;
+    }
+    /* .card1{
+        order: -3;
+    } */
+    /* .designs{
+        order: -3;
+        height: 150px;
+    } */
+    .card1{
+        width: 500px;
+        height: 250px;
+    }
+    .designs > img {
+        width: 19rem;
+    }
+    .arrow_right, .arrow_left{
+        top: auto;
     }
     
     .card2 , .resumeBox{
-        width: 180px;
+        width: 184px;
         height: 180px;
+        order: -3;
+    }
+    .resumeBox{
+        align-self:flex-end;
+    }
+   
+}
+@media screen and (min-width: 1000px)and (max-width: 1200px) {
+    .container{
+        max-width: 800px;
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 250px 250px 250px 250px;
+    }
+    .card1-into{
+        font-size: 24px;
+        line-height: 24px;
+        width: -webkit-fill-available;
+    }
+    .designs > img {
+        width: 23rem;
+    }
+    .arrow_right, .arrow_left{
+        top: auto;
+    }
+}
 
+@media screen and (max-width: 800px) {
+    .container{
+        display: flex; 
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
     }
     .designs > img{
-        width: 20rem;
+        width: 17rem;
+    }
+    .arrow_right, .arrow_left{
+        top: auto;
+    }
+    .card1{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .card1-into{
+        font-size: 25px;
+        width: -webkit-fill-available;
+    }
+    .designs{
+        height: 200px;
     }
     }

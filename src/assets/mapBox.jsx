@@ -6,6 +6,8 @@ import { useMemo } from 'react'
 
 
 function MapBox(props){
+  // console.log(import.meta.env.VITE_SOME_KEY)
+  // console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY)
   const currentstate = props.currentstate
   let dynoGrid
   if (currentstate === "Media") {
@@ -18,7 +20,6 @@ function MapBox(props){
     dynoGrid = {gridRow: '4/5', gridColumn: '1/3'}
   }
   const markerTest = useMemo(() => ({ lat:28.4899, lng:-81.4294}), []); 
-
   const map_center = {lat:28.4899, lng:-81.4294}
   
   const {isLoaded} = useLoadScript({
@@ -42,12 +43,12 @@ function MapBox(props){
     // </div>
     <div className={'card MapBox'+props.carddark} style={dynoGrid}>
 
-    <GoogleMap zoom={5} center={map_center} mapContainerClassName={'mapclass'}>
-    <MarkerF title={'Uluru'}
+    <GoogleMap zoom={10} center={map_center} mapContainerClassName={'mapclass'}>
+    <MarkerF title={'Millenia'}
         name={'Location'}
         key={1}
         position={markerTest}/>
     </GoogleMap></div>) 
-    
+
 }
 export default MapBox

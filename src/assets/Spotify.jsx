@@ -19,7 +19,7 @@ function Spotify(props){
 
     return(
         <div className={'card Spotify'+props.carddark} style={dynoGrid}>
-        Spotify
+        
         </div>
     ) 
 }
