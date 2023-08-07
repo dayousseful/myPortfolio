@@ -6,10 +6,10 @@ import { useMemo } from 'react'
 
 
 function MapBox(props){
-  // console.log(import.meta.env.VITE_SOME_KEY)
-  // console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY)
+
   const currentstate = props.currentstate
   let dynoGrid
+ 
   if (currentstate === "Media") {
     dynoGrid = {gridArea:'1 / 1 / 2 / 3'}
     } else if(currentstate === "About") {
@@ -21,9 +21,9 @@ function MapBox(props){
   }
   const markerTest = useMemo(() => ({ lat:28.4899, lng:-81.4294}), []); 
   const map_center = {lat:28.4899, lng:-81.4294}
-  
+
   const {isLoaded} = useLoadScript({
-    googleMapsApiKey: 'AIzaSyAReoG86J6cQAhwL8rJo2FGUiahJg61OXM',
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   })
   if (!isLoaded) return <div>loading...</div>
   // const [users, setUsers] = React.useState([])
@@ -43,7 +43,12 @@ function MapBox(props){
     // </div>
     <div className={'card MapBox'+props.carddark} style={dynoGrid}>
 
-    <GoogleMap zoom={10} center={map_center} mapContainerClassName={'mapclass'}>
+    <GoogleMap 
+      zoom={10}
+      center={map_center} 
+      mapContainerClassName={'mapclass'}
+      options={{mapId: 'b98ad0ccc1f81c93'}}
+    >
     <MarkerF title={'Millenia'}
         name={'Location'}
         key={1}
