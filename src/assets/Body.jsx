@@ -27,7 +27,7 @@ function Body(props) {
         <Designs carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <Card4 carddark={cardDark} currentstate={props.currentstate}/>
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
-        <Card11 carddark={cardDark} currentstate={props.currentstate}/>
+        <Card11 carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>
         <Card10 carddark={cardDark} currentstate={props.currentstate}/>
         </div>
