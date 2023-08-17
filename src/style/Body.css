@@ -181,16 +181,71 @@ a{
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
     overflow: hidden;
+    flex-direction: column;
+    justify-content:space-evenly;
 }
 
-.Spotify{
-    /* grid-row: 3/4;
-    grid-column: 4/5; */
-    border-radius: 32px;
-    box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
-    /* transition: var(0.4s); */
-    overflow: hidden;
+.spotifyImg{
+    width: 202px;
+    height: 202px;
+    border-radius: 12px;
+    box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
+.spotifyIcon{
+    width: 70px;
+    height: 70px;
+}
+.recentlyplayedContanier{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+.animationContainer{
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+}
+.spotifyAnimator1{
+    animation: playing 0.8s infinite;
+}
+.spotifyAnimator2{
+    animation: playing 1s infinite;
+}
+.spotifyAnimator3{
+    animation: playing 1.2s infinite;
+}
+.spotifyAnimator1, .spotifyAnimator2, .spotifyAnimator3{
+    width: 3px;
+    border-radius: 1.5px;
+    background-color: #2ad45e;
+    margin-right: 3px;
+}
+@keyframes playing {
+    0% {
+      height: 3px;
+    }
+    50% {
+      height: 12px;
+    }
+    100% {
+      height: 3px;
+    }
+}
+.recentlyPlayed{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2ad45e;
+    pointer-events: none;
+}
+.trackName{
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: inherit;
+}
+
 .MapBox{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
@@ -253,6 +308,11 @@ input{
     border-radius: 5px;
     display: block;
     background: transparent;
+}
+.Github{
+    border-radius: 32px;
+    box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
+    overflow: hidden;
 }
 @media screen and (max-width: 400px) {
     .container{
