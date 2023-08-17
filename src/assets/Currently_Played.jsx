@@ -44,22 +44,25 @@ export default async function getCurrentlyPlayedItem(
     return false
   }
 
-  const songsArray = await response.json();
-  const albumImageUrl = songsArray.items[0].track.album.images[0].url;
-  const artist =  songsArray.items[0].track.artists[0].name;
-  const song = songsArray.items[0].track.name;
-  const songUrl = songsArray.items[0].track.external_urls.spotify;
+  const songsArray = await response.json()
+  const albumImageUrl = songsArray.items[0].track.album.images[0].url
+  const artist =  songsArray.items[0].track.artists[0].name
+  const song = songsArray.items[0].track.name
+  const songUrl = songsArray.items[0].track.external_urls.spotify
+  const previewUrl = songsArray.items[0].track.preview_url
 
-  console.log(songsArray)
-  console.log(albumImageUrl)
-  console.log(song)
-  console.log(artist)
-  console.log(songUrl)
-  
+  // console.log(songsArray)
+  // console.log(albumImageUrl)
+  // console.log(song)
+  // console.log(artist)
+  // console.log(songUrl)
+  // console.log(previewUrl)
   return {
+    songsArray,
     albumImageUrl,
     artist,
     songUrl,
     song,
-  };
+    previewUrl
+  }
 }
