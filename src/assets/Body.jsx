@@ -10,7 +10,7 @@ import Card4 from './Card4'
 import Spotify from './Spotify'
 import MapBox from './MapBox'
 import Card10 from './Card10'
-import Card11 from './Card11'
+import GitHub from './GitHub'
 
 function Body(props) {
     function toggleColor(){props.setColorstate(prevGoingdark => (!prevGoingdark))}
@@ -27,7 +27,7 @@ function Body(props) {
         <Designs carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <Card4 carddark={cardDark} currentstate={props.currentstate}/>
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
-        <Card11 carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
+        <GitHub carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>
         <Card10 carddark={cardDark} currentstate={props.currentstate}/>
         </div>
