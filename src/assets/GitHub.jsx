@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM  from 'react-dom/client'
 import '../style/Body.css'
 
-function Card11(props){
+function GitHub(props){
 
   const currentstate = props.currentstate
   let dynoGrid, iconState
@@ -22,10 +22,10 @@ function Card11(props){
   return(
     <div className={'card Github'+props.carddark} style={dynoGrid}>
       <a href='https://github.com/dayousseful' target="_blank" rel="noopener" >
-        <img src={iconState} className='image1' alt='Github Icon'/>
+        <img src={iconState} className='Icons' alt='Github Icon'/>
       </a>
     </div>
   ) 
 }
 
-export default Card11
+export default GitHub

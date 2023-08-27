@@ -74,11 +74,11 @@ function Spotify(props){
           <div><p className='recentlyPlayed'>Recently Played</p></div>
         </div>
 
-        <div style={{margin:'7px'}}><a className='trackName' href={result.songUrl} target="_blank" rel="noopener">
+        <div style={{margin:'5px'}}><a className='trackName' href={result.songUrl} target="_blank" rel="noopener">
           <p>{result.song}</p>
         </a></div>
 
-        <div style={{margin:'7px'}}><p className='artistName'>{result.artist}</p></div>
+        <div style={{margin:'5px'}}><p className='artistName'>{result.artist}</p></div>
       </div>
     </div>
   ) 

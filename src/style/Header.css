@@ -35,7 +35,7 @@ body{
     padding-bottom: 11px;
     padding-left: 6px;
     padding-right: 6px;
-    margin-left: -3vw;
+    /* margin-left: -3vw; */
     max-width: 314px;
 }
 .fmd{
@@ -47,7 +47,7 @@ body{
     padding-bottom: 11px;
     padding-left: 6px;
     padding-right: 6px;
-    margin-left: -3vw;
+    /* margin-left: -3vw; */
     max-width: 314px;
     border: 2px solid rgb(48, 54, 61);
     color: var(--dark-font-color);
