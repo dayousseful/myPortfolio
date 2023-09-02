@@ -6,7 +6,7 @@ import Colorbox from './Colorbox'
 import ResumeBox from './ResumeBox'
 import LinkedinBox from './LinkedinBox'
 import Designs from './Designs'
-import Card4 from './Card4'
+import AboutMe from './AboutMe'
 import Spotify from './Spotify'
 import MapBox from './MapBox'
 import Card10 from './Card10'
@@ -25,7 +25,7 @@ function Body(props) {
         <ResumeBox carddark={cardDark} colorState={props.colorState} currentstate={props.currentstate}/>
         <LinkedinBox carddark={cardDark} currentstate={props.currentstate}/>
         <Designs carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
-        <Card4 carddark={cardDark} currentstate={props.currentstate}/>
+        <AboutMe carddark={cardDark} currentstate={props.currentstate}/>
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
         <GitHub carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>
