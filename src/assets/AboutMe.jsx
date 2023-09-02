@@ -2,11 +2,7 @@ import React from 'react'
 import ReactDOM  from 'react-dom/client'
 import '../style/Body.css'
 
-
-
-
-
-function Card4(props){
+function AboutMe(props){
 
   const currentstate = props.currentstate
   let dynoGrid
@@ -22,10 +18,15 @@ function Card4(props){
 
   
   return(
-    <a className={'card card4'+props.carddark} style={dynoGrid}>
-      <h1>About</h1>
-    </a>
+    <div className={'card aboutMe'+props.carddark} style={dynoGrid}>
+      <nav className='aboutmeNavBar'>
+        <div className='aboutmeHighlight'></div>
+        <div className='filter' style={{zIndex:1}}>About</div>
+        <div className='filter' style={{zIndex:1}}>Inspiration</div>
+      </nav>
+      <p>I am a recent graduate from the University of central Florida, with bachelors in Web design and social platforms</p>
+    </div>
   ) 
 
 }
-export default Card4
+export default AboutMe
