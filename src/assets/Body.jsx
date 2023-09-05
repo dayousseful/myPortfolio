@@ -25,7 +25,7 @@ function Body(props) {
         <ResumeBox carddark={cardDark} colorState={props.colorState} currentstate={props.currentstate}/>
         <LinkedinBox carddark={cardDark} currentstate={props.currentstate}/>
         <Designs carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
-        <AboutMe carddark={cardDark} currentstate={props.currentstate}/>
+        <AboutMe carddark={cardDark} colorState={props.colorState} currentstate={props.currentstate}/>
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
         <GitHub carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>

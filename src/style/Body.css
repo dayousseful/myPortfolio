@@ -173,22 +173,43 @@ a{
 .aboutMe > p {
     text-align: center;
 }
-.aboutmeNavBar{
+.aboutmeNavBarDark{
     position: relative;
     display: flex;
     align-items: center;
     border-radius: 25px;
     padding-top: 11px;
     padding-bottom: 11px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 0px;
+    padding-right: 0px;
     max-width: 314px;
     border: 2px solid rgb(48, 54, 61);
     color: var(--dark-font-color);
 }
-.aboutmeHighlight{
+.aboutmeNavBar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 25px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 314px;
+}
+.aboutmeHighlightDark{
     position: absolute;
     background: rgb(33, 38, 45);
+    /* z-index: -1; */
+    width: 70px;
+    border-radius: 16px;
+    height: 32px;
+    transition: all 0.3s;
+}
+.aboutmeHighlight{
+    position: absolute;
+    background:white;
     /* z-index: -1; */
     width: 70px;
     border-radius: 16px;
