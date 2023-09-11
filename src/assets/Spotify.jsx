@@ -14,14 +14,16 @@ function Spotify(props){
   const [result, setResult] = useState({});
 
   let dynoGrid
-  if (currentstate === "Media") {
+  if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '2/4', gridColumn: '3/4', opacity:'0.2'}
-  } else if(currentstate === "About") {
+  } else if(currentstate === "About" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '2/4', gridColumn: '3/4', opacity:'0.2'}
-  } else if(currentstate === "Projects") {
+  } else if(currentstate === "Projects" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '1 / 4 / 3 / 5'}
-  }else{
+  }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '2/4', gridColumn: '3/4'}
+  }else if(currentstate === "All" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '5/7', gridColumn: '3/6'}
   }
   
   useEffect(() => {
@@ -63,7 +65,6 @@ function Spotify(props){
         <div>
           <img src={'src/images/Spotify-Icon.svg'} className='spotifyIcon'   alt='Spotify Icon'/>
         </div>
-      
         <div style={{margin:'7px'}} className='recentlyplayedContanier'>
           <div className='animationContainer'>
             <div className='spotifyAnimator1'></div>
@@ -73,15 +74,14 @@ function Spotify(props){
 
           <div><p className='recentlyPlayed'>Recently Played</p></div>
         </div>
-
-        <div style={{margin:'5px'}}><a className='trackName' href={result.songUrl} target="_blank" rel="noopener">
-          <p>{result.song}</p>
-        </a></div>
-
-        <div style={{margin:'5px'}}><p className='artistName'>{result.artist}</p></div>
+        <div style={{margin:'5px'}}>
+          <a className='trackName' href={result.songUrl} target="_blank" rel="noopener">
+          <p>{result.song}</p></a>
+        </div>
+        <div style={{margin:'5px'}}><p className='artistName'>{result.artist}</p>
+        </div>
       </div>
     </div>
   ) 
 }
-
 export default Spotify

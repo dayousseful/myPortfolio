@@ -7,15 +7,18 @@ function AboutMe(props){
   const [highlight, setHighlight] = useState(true)
   const currentstate = props.currentstate
   let dynoGrid, highlightStyle, aboutmeHighlight, aboutNavbar
-  if (currentstate === "Media") {
+  if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '2/4', gridColumn: '4/5', opacity:'0.2'}
-  } else if(currentstate === "About") {
+  } else if(currentstate === "About" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '1/3', gridColumn: '4/5'}
-  } else if(currentstate === "Projects") {
+  } else if(currentstate === "Projects" && window.innerWidth> 1000) {
     dynoGrid = {gridArea:'2 / 3 / 4 / 4' , opacity:'0.2'}
-  }else{
+  }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '1/3', gridColumn: '4/5'}
+  }else if(currentstate === "All" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '3/5', gridColumn: '3/5'}
   }
+
   
   
   highlight ? highlightStyle = {left:4,width:70} : highlightStyle = {right:4,width:99}
