@@ -10,16 +10,17 @@ function Colorbox(props){
 
   const currentstate = props.currentstate
   let dynoGrid
-  if (currentstate === "Media") {
+  if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '2 / 2 / 3 / 3', opacity:'0.2'}
-  } else if(currentstate === "About") {
+  } else if(currentstate === "About" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '4 / 3 / 5 / 4', opacity:'0.2'}
-  } else if(currentstate === "Projects") {
+  } else if(currentstate === "Projects" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '1/2', gridColumn: '3/4'}
-  }else{
+  } else if(currentstate === "All" && window.innerWidth> 1000){
+    dynoGrid = {gridRow: '1/2', gridColumn: '3/4'}
+  } else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '3/4'}
   }
-
 
   return(
     <div className={'card card2 '+ props.carddark} onClick={props.togglecolor}    style={dynoGrid}>

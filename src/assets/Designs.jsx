@@ -9,13 +9,17 @@ function Designs(props){
   const currentstate = props.currentstate
   
   let dynoGrid
-  if (currentstate === "Projects") {
+  if (currentstate === "Projects" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
-  } else if(currentstate === "All") {
+  } else if(currentstate === "All" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '3/1/4/3' , zIndex:'1'}
-  } else{
+  } else if((currentstate === "Media" || currentstate === "About") && window.innerWidth> 1000){
     dynoGrid = {gridArea: '3/1/4/3' , opacity:'0.2'}
+  }else if(currentstate === "All" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '2/3', gridColumn: '3/5'}
   }
+
+
 
 
   const images = [

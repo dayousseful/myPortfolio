@@ -6,14 +6,16 @@ import styled from "styled-components"
 function Box1(props){
   const currentstate = props.currentstate
   let dynoGrid
-  if (currentstate === "Media") {
+  if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridArea:'4 / 1 / 5 / 3', opacity:'0.2'}
-  } else if(currentstate === "About") {
+  } else if(currentstate === "About" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
-  } else if(currentstate === "Projects") {
+  } else if(currentstate === "Projects" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '3/1/4/3', opacity:'0.2'}
-  }else{
+  }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
+  }else if(currentstate === "All" && window.innerWidth< 1000){
+  dynoGrid = {gridRow: '1/2', gridColumn: '1/2'}
   }
 
 
