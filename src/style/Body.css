@@ -315,7 +315,7 @@ a{
     height: 100%;
 }
 .designs{
-    grid-area: 3/1/4/2;
+    /* grid-area: 3/1/4/2;  */
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
@@ -381,8 +381,8 @@ input{
         width: 360px;
     }
     .card2 , .resumeBox{
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
 }
 @media screen and (min-width: 401px)and (max-width: 540px) {
@@ -413,50 +413,49 @@ input{
 }
 @media screen and (min-width: 800px)and (max-width: 1000px) {
    .container{
-      max-width: 800px;
-      display: flex;
-      margin: 0 auto;
-      justify-content: center;
-      flex-wrap: wrap;
-
+      max-width: 650px;
+      grid-template-columns: 150px 150px 150px 150px;
+      grid-template-rows: 150px 150px 150px 150px 150px 150px 150px;
+      gap: 5px;
     }
     .card{
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 300px;
     } 
     .card1-into{
         font-size: 24px;
         line-height: 24px;
         width: -webkit-fill-available;
-        
     }
     /* .card1{
         order: -3;
     } */
-    /* .designs{
-        order: -3;
+    .designs{
+        width: 300px;
         height: 150px;
-    } */
-    .card1{
-        width: 350px;
-        height: 250px;
-        order: -2;
     }
     .designs > img {
-        width: 19rem;
+        width: 15rem;
+        border-radius: 20px;
+    }
+    .arrow_right, .arrow_left{
+        width: 1.7rem;
+    }
+    .Icons{
+        width: 70px;
+    }
+    .card1{
+        grid-area: 1/1/2/2;
     }
     .arrow_right, .arrow_left{
         top: auto;
     }
-    
-    .card2 , .resumeBox{
-        width: 160px;
-        height: 160px;
-        /* order: -3; */
+    .Spotify{
+        height: 460px;
     }
-    .designs{
-        order: -1;
-        height: 112px;
+    .card2 , .resumeBox, .LinkedinBox, .Github{
+        width: 150px;
+        height: 150px;
     }
    
 }
@@ -470,13 +469,16 @@ input{
         font-size: 24px;
         line-height: 24px;
         width: -webkit-fill-available;
+        padding-top: 0.5rem;
     }
+    
     .designs > img {
         width: 23rem;
     }
     .arrow_right, .arrow_left{
         top: auto;
     }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -503,4 +505,4 @@ input{
     .designs{
         height: 200px;
     }
-    }
+}

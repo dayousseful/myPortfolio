@@ -7,14 +7,16 @@ function GitHub(props){
   const currentstate = props.currentstate
   let dynoGrid, iconState
 
-  if (currentstate === "Media") {
-      dynoGrid = {gridRow: '1/2', gridColumn: '4/5'}
-    } else if(currentstate === "About") {
-      dynoGrid = {gridRow: '3/4', gridColumn: '4/5', opacity:'0.2'}
-    } else if(currentstate === "Projects") {
-      dynoGrid = {gridRow: '3/4', gridColumn: '4/5', opacity:'0.2'}
-    }else{
-      dynoGrid = {gridRow: '3/4', gridColumn: '4/5'}
+  if (currentstate === "Media"  && window.innerWidth> 1000) {
+    dynoGrid = {gridRow: '1/2', gridColumn: '4/5'}
+  } else if(currentstate === "About"  && window.innerWidth> 1000) {
+    dynoGrid = {gridRow: '3/4', gridColumn: '4/5', opacity:'0.2'}
+  } else if(currentstate === "Projects"  && window.innerWidth> 1000) {
+    dynoGrid = {gridRow: '3/4', gridColumn: '4/5', opacity:'0.2'}
+  }else if(currentstate === "All" && window.innerWidth> 1000){
+    dynoGrid = {gridRow: '3/4', gridColumn: '4/5'}
+  }else if(currentstate === "All" && window.innerWidth< 1000){
+    dynoGrid = {gridRow:  '7/8', gridColumn: '2/3'}
   }
 
   if (props.colorState === true){ iconState ='src/images/github-mark-white.svg'} else {iconState ='src/images/github-mark.svg'}
