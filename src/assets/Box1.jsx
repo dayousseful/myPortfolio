@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM  from 'react-dom/client'
 import '../style/Header.css'
-import styled from "styled-components"
 
 function Box1(props){
   const currentstate = props.currentstate
@@ -14,8 +13,11 @@ function Box1(props){
     dynoGrid = {gridArea: '3/1/4/3', opacity:'0.2'}
   }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
-  }else if(currentstate === "All" && window.innerWidth< 1000){
-  dynoGrid = {gridRow: '1/2', gridColumn: '1/2'}
+  }else if(currentstate === "All" || currentstate === "About" && window.innerWidth< 1000){dynoGrid = {gridRow: '1/2', gridColumn: '1/2'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '5/7', gridColumn: '1/3', opacity:'0.1'}
+  }else if(currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '1/2', gridColumn: '1/2', opacity:'0.1'}
   }
 
 
