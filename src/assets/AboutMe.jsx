@@ -17,8 +17,13 @@ function AboutMe(props){
     dynoGrid = {gridRow: '1/3', gridColumn: '4/5'}
   }else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '3/5', gridColumn: '3/5'}
+  }else if(currentstate === "About" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '2/4', gridColumn: '3/5'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '6/8', gridColumn: '3/5', opacity:'0.1'}
+  }else if(currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '3/5', gridColumn: '3/5', opacity:'0.1'}
   }
-
   
   
   highlight ? highlightStyle = {left:4,width:70} : highlightStyle = {right:4,width:99}

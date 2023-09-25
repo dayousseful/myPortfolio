@@ -17,6 +17,10 @@ function ResumeBox(props){
     dynoGrid = {gridRow:  '2/3', gridColumn: '1/2'}
   }else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow:  '7/8', gridColumn: '1/2'}
+  }else if(currentstate === "About" && window.innerWidth< 1000){
+    dynoGrid = {gridRow:  '1/2', gridColumn: '3/4'}
+  }else if(currentstate === "Projects" || currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow:  '7/8', gridColumn: '1/2', opacity:'0.1'}
   }
 
   return(

@@ -17,6 +17,10 @@ function GitHub(props){
     dynoGrid = {gridRow: '3/4', gridColumn: '4/5'}
   }else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow:  '7/8', gridColumn: '2/3'}
+  }else if(currentstate === "About" || currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow:  '7/8', gridColumn: '2/3', opacity:'0.1'}
+  }else if(currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow:  '1/2', gridColumn: '3/4'}
   }
 
   if (props.colorState === true){ iconState ='src/images/github-mark-white.svg'} else {iconState ='src/images/github-mark.svg'}
