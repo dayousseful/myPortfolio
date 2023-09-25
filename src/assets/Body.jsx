@@ -9,7 +9,7 @@ import Designs from './Designs'
 import AboutMe from './AboutMe'
 import Spotify from './Spotify'
 import MapBox from './MapBox'
-import Card10 from './Card10'
+import Form from './Form'
 import GitHub from './GitHub'
 
 function Body(props) {
@@ -29,7 +29,7 @@ function Body(props) {
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
         <GitHub carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>
-        <Card10 carddark={cardDark} currentstate={props.currentstate}/>
+        <Form carddark={cardDark} currentstate={props.currentstate}/>
         </div>
     )
 }

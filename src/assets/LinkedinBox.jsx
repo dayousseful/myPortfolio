@@ -13,8 +13,11 @@ function LinkedinBox(props){
     dynoGrid = {gridRow:  '2/3', gridColumn: '2/3' ,opacity:'0.2'}
   }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow:  '2/3', gridColumn: '2/3'}
-  }else if(currentstate === "All" && window.innerWidth< 1000){
+  }else if(currentstate === "All" || currentstate === "About" || 
+    currentstate ===     "Media" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '4/5'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '4/5', gridColumn: '3/4', opacity:'0.1'}
   }
 
   return(

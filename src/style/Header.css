@@ -5,7 +5,8 @@
 }
 
 :root{
-    --main-bg-color: #f7eeeb;
+    --main-bg-color:#f7eeeb;
+     /* #f7eeeb */
     --primary-button-border:  linear-gradient(265.49deg, #4FAE9D 7.51%, #EDB320 32.14%, #4FAE9D 72.29%, #2F91FF 91.29%);
     --dark-bg-color:rgb(9, 12, 16);
     --dark-font-color:rgb(240, 242, 248);
