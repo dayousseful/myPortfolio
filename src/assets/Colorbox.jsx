@@ -20,7 +20,14 @@ function Colorbox(props){
     dynoGrid = {gridRow: '1/2', gridColumn: '3/4'}
   } else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '3/4'}
+  } else if(currentstate === "About" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '7/8', gridColumn: '1/2', opacity:'0.1'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '4/5', gridColumn: '4/5', opacity:'0.1'}
+  }else if(currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '7/8', gridColumn: '2/3', opacity:'0.1'}
   }
+
 
   return(
     <div className={'card card2 '+ props.carddark} onClick={props.togglecolor}    style={dynoGrid}>

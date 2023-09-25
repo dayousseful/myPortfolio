@@ -10,13 +10,19 @@ function Designs(props){
   
   let dynoGrid
   if (currentstate === "Projects" && window.innerWidth> 1000) {
-    dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
+    dynoGrid = {gridRow: '4/5', gridColumn: '1/3', opacity:'0.2'}
   } else if(currentstate === "All" && window.innerWidth> 1000) {
     dynoGrid = {gridArea: '3/1/4/3' , zIndex:'1'}
-  } else if((currentstate === "Media" || currentstate === "About") && window.innerWidth> 1000){
-    dynoGrid = {gridArea: '3/1/4/3' , opacity:'0.2'}
-  }else if(currentstate === "All" && window.innerWidth< 1000){
+  } else if(currentstate === "About" && window.innerWidth> 1000){
+    dynoGrid = {gridArea: '3/1/4/3' , opacity:'0.1'}
+  } else if(currentstate === "Media" && window.innerWidth> 1000){
+    dynoGrid = {gridArea:'1 / 1 / 2 / 3'}
+  }else if(currentstate === "All" || currentstate === "Media" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '2/3', gridColumn: '3/5'}
+  }else if(currentstate === "About" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '4/5', gridColumn: '3/5', opacity:'0.1'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '5/6', gridColumn: '3/5', opacity:'0.1'}
   }
 
 
