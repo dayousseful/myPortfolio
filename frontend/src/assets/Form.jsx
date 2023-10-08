@@ -21,11 +21,10 @@ function Form(props){
   }else if(currentstate === "About" || currentstate === "Projects" || currentstate === "Media" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '3/5', gridColumn: '1/3', opacity:'0.1'}
   }
-  
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('') 
-  const [feedback, setFeedback] = useState('')
+  const [feedback, setFeedback] = useState(false)
 
   const axiosPostData = async()=> {
     const postData ={
@@ -33,38 +32,35 @@ function Form(props){
       email: email
     }
     await axios.post('http://localhost:8080/form', postData)
-    .then(res => setFeedback(<p className='feedback'>{res.data}</p>))
+    .then(res => setFeedback(res.data))
   }
-
   const handleSubmit = (event) => {
     event.preventDefault()
     axiosPostData()
   }
 
-  // useEffect(()=>{
-  //   fetch ("/form",{
-  //     method: "post",
-  //     headers:{
-  //       'content-type':'application/json'
-  //     },
-  //     body: JSON.stringify(formInfo)
-  //   })
-  //   .then(res =>res.json())
-  //   .then(data => console.log(data))
-  // },[])
-
-  return(
-    <div className={'card card10'+props.carddark} style={dynoGrid}>
-      <h2> Shall I keep you in the loop?</h2>
-      <form onSubmit={handleSubmit}>
-        <div><input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/></div>
-
-        <div><input placeholder="Email address" value={email} 
-        onChange={(e) => setEmail(e.target.value)} /></div>
-        {feedback}
-        <button>submit</button>
-      </form>
-    </div>
-  ) 
+  if (!feedback){
+    return(
+      <div className={'card formContainer'+props.carddark} style={dynoGrid}>
+        <div className='formContainerDiv'>
+        <div><h2 className='formHeader'> Shall I keep you in the loop?</h2>
+        <p className='formParagraph'>Fill out the form to get in touch</p></div>
+        <form  className='inputContatiner' onSubmit={handleSubmit}>
+          <div><input className='inputBox'placeholder="Name" type='text' value={name} onChange={(e) => setName(e.target.value)}/></div>
+          <div><input className='inputBox' placeholder="Email address" type='email' value={email} 
+          onChange={(e) => setEmail(e.target.value)} /></div>
+          {feedback}
+          <div className='buttonDiv'><button className='submitButton'>Submit</button></div>
+        </form>
+        </div>
+      </div>
+    )
+  }else{
+    return(
+    <div className={'card formContainer'+props.carddark} style={dynoGrid}>
+      <img src='src/images/celebration.png' className= 'celebEmoji' alt='Celebration'/>
+    </div>)
+  }
+  
 }
 export default Form
