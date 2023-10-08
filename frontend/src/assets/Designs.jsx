@@ -25,9 +25,6 @@ function Designs(props){
     dynoGrid = {gridRow: '5/6', gridColumn: '3/5', opacity:'0.1'}
   }
 
-
-
-
   const images = [
     {url : 'src/images/image1.jpeg', title:'image1'},
     {url : 'src/images/image2.jpeg', title:'image2'},

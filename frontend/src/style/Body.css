@@ -19,6 +19,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
 }
 .car-dark{
     background: var(--dark-box-bg);
@@ -26,9 +27,7 @@ body{
     border: 2px solid rgb(48, 54, 61);
     color: white;
 }
-.car-dark > form > div > input {
-    color: white;
-}
+
 .card1 {
     grid-row: 1/2;
     grid-column: 1/3;
@@ -61,12 +60,18 @@ body{
     -moz-box-align: center;
     align-items: center;
     transition: all 0.2s ease-out 0s;  
-    cursor: pointer;
-    
+    cursor: pointer; 
+}
+.emojiButton:hover{
+    box-shadow: rgb(240, 242, 248) 0px 0px 0px 4px;
 }
 .emoji-b-dark {
     box-shadow: rgb(48, 54, 61) 0px 0px 0px 2px;
     color: white;
+}
+.emoji-b-dark:hover{
+    box-shadow: rgb(48, 54, 61) 0px 0px 0px 4px;
+
 }
 
 .image1{
@@ -130,8 +135,8 @@ body{
     align-items: center;
     cursor: pointer;
     transition-property: svg;
-    transition-duration: 4s;
-    transition-delay: 2s;
+    /* transition-duration: 4s;
+    transition-delay: 2s; */
 }
 .DM-Container-icon{
     width: 60%;
@@ -162,17 +167,27 @@ a{
     grid-column: 4/5; */
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
-    /* transition: var(0.4s); */
+     transition: all 0.3s;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-right: 1rem;
     padding-left: 1rem;
+    position: relative;
 }
-.aboutMe > p {
-    text-align: center;
+.aboutmeParagraph {
+    line-height: 18px;
 }
+.aboutmeParaDiv{
+margin-bottom: 77px;
+}
+.aboutmeParagraph > span{
+    color: #FFB800;
+}
+.navDivAboutme{   
+    position: absolute;
+    top: 66px;}
 .aboutmeNavBarDark{
     position: relative;
     display: flex;
@@ -215,6 +230,10 @@ a{
     border-radius: 16px;
     height: 32px;
     transition: all 0.3s;
+}
+.filterMyself:hover, .filterProject:hover{
+    color: rgb(117 117 117);
+    transition: all 0.3s ease 0s;
 }
 .LinkedinBox{
     /* grid-row: 2/3;
@@ -345,27 +364,88 @@ a{
     position: absolute;
 }
 
-.card10{
+.formContainer{
     border-radius: 32px;
     box-shadow: 0.2rem 0.4rem 12rem rgb(0 0 0 / 15%);
     /* transition: var(0.4s); */
     overflow: hidden;
+ 
+}
+.formContainerDiv{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    font-size: 35px;
+    transition: all 0.3s;
+    padding: 40px 44px;
 }
-.card10 > h2{
+.formHeader{
+    font-family: serif-bold;
 
-    font-size: 24px;
 }
-input{ 
-    margin-bottom: 15px;
+.formParagraph{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+.inputContatiner{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submitButton{
+    width: 75px;
     height: 30px;
-    text-indent: 10px;
-    border: 1px solid #444;
+    border: 0px;
     border-radius: 5px;
     display: block;
     background: transparent;
+    text-align: center;
+    box-shadow: rgb(48, 54, 61) 0px 0px 0px 2px;
+    transition: box-shadow 0.2s ease-out 0s;
+    color: rgb(117 117 117); 
+    /* will-change: transform; */
+}
+.submitButton:hover{
+    box-shadow: rgb(48, 54, 61) 0px 0px 0px 4px;
+    color: white;
+}
+.celebEmoji{
+    max-width: 190px;
+}
+/* input{ 
+    margin-bottom: 15px;
+    height: 30px;
+    text-indent: 10px;
+    border: 0px;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: rgb(48, 54, 61) 0px 0px 0px 2px;
+} */
+.inputBox{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    width: 100%;
+    background: transparent;
+    border-bottom: 2px solid rgb(48, 54, 61);
+    padding: 12px 0px;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    color: rgb(240, 242, 248);
+    margin-bottom: 8px;
+    border-radius: 0px;
+}
+.inputBox:focus{
+    outline: none;
 }
 .Github{
     border-radius: 32px;
@@ -381,8 +461,8 @@ input{
         width: 360px;
     }
     .card2 , .resumeBox{
-        width: 170px;
-        height: 170px;
+        width: 167px;
+        height: 167px;
     }
 }
 @media screen and (min-width: 401px)and (max-width: 540px) {
