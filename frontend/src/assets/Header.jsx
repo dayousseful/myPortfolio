@@ -17,9 +17,9 @@ function Header(props) {
   } else if(currentstate === "About") {
     Highlighted = {width: 70, left :61}
   } else if(currentstate === "Projects") {
-      Highlighted = {width: 84, right: 85}
+    Highlighted = {width: 84, right: 85}
   }else{
-      Highlighted = {width: 55}
+    Highlighted = {width: 55}
   }
 
   if (props.colorState === true){

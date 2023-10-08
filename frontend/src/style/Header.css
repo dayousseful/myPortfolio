@@ -58,6 +58,11 @@ body{
     padding: 0px 16px;
     cursor: pointer;
 }
+.filterAll:hover, .filterAbout:hover, .filterMedia:hover, .filterProjects:hover{
+    color: rgb(117 117 117);
+    transition: all 0.3s ease 0s;
+}
+
 
 .filterHighlight{
     position: absolute;

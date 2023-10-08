@@ -11,7 +11,7 @@ router.post('/form', async(req,res) => {
     const newUser = new schemas.Users(userData)
     const saveUser = await newUser.save()
     if (saveUser){
-      res.send('form filled')
+      res.send(true)
     }
     res.end()
 })

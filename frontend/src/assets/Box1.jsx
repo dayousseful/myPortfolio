@@ -20,10 +20,11 @@ function Box1(props){
     dynoGrid = {gridRow: '1/2', gridColumn: '1/2', opacity:'0.1'}
   }
 
-
   let emojiButton, emoji
-  if (props.colorState === true){ emojiButton ='emoji-b-dark'}
   const [emojistate ,setEmojistate ] = React.useState(true)
+
+  props.colorState ? emojiButton ='emoji-b-dark' : emojiButton = ''
+  
   emojistate ? emoji = ('src/images/emoji.png') :emoji = ('src/images/emoji 2.png')
   function emojiToggle(){setEmojistate(prevEmojistate => (!prevEmojistate))}
 
