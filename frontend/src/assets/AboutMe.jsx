@@ -17,12 +17,14 @@ function AboutMe(props){
     dynoGrid = {gridRow: '1/3', gridColumn: '4/5'}
   }else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '3/5', gridColumn: '3/5'}
-  }else if(currentstate === "About" && window.innerWidth< 1000){
+  }else if(currentstate === "About" && window.innerWidth< 1000 && window.innerWidth > 800){
     dynoGrid = {gridRow: '2/4', gridColumn: '3/5'}
   }else if(currentstate === "Projects" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '6/8', gridColumn: '3/5', opacity:'0.1'}
-  }else if(currentstate === "Media" && window.innerWidth< 1000){
+  }else if(currentstate === "Media" && window.innerWidth< 1000 ){
     dynoGrid = {gridRow: '3/5', gridColumn: '3/5', opacity:'0.1'}
+  }else if(currentstate === "About" && window.innerWidth< 800){
+    dynoGrid = {order:'-1'}
   }
   
   
@@ -71,7 +73,7 @@ function AboutMe(props){
         <p className='aboutmeParagraph'>I always wanted to created new projects that can help me show my skills and passion without hitting analysis paralysis, and thats where the inspiration of this project came from. It started with breaking the website into small sections, then filling it up piece by piece.
         </p>
         <br/>
-        <p className='aboutmeParagraph'>
+        <p className='aboutmeParagraph'> 
         I always wanted to created new projects that can help me show my skills and passion without hitting analysis paralysis.
         </p>
         

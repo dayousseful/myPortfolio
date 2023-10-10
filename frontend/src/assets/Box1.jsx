@@ -13,11 +13,13 @@ function Box1(props){
     dynoGrid = {gridArea: '3/1/4/3', opacity:'0.2'}
   }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '1/3'}
-  }else if(currentstate === "All" || currentstate === "About" && window.innerWidth< 1000){dynoGrid = {gridRow: '1/2', gridColumn: '1/2'}
+  }else if(currentstate === "All" || currentstate === "About" && window.innerWidth< 1000 & window.innerWidth> 800){dynoGrid = {gridRow: '1/2', gridColumn: '1/2'}
   }else if(currentstate === "Projects" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '5/7', gridColumn: '1/3', opacity:'0.1'}
   }else if(currentstate === "Media" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '1/2', gridColumn: '1/2', opacity:'0.1'}
+  }else if (currentstate === "About" && window.innerWidth< 800){
+    dynoGrid = {order:'-1'}
   }
 
   let emojiButton, emoji
@@ -29,11 +31,12 @@ function Box1(props){
   function emojiToggle(){setEmojistate(prevEmojistate => (!prevEmojistate))}
 
   return(
-  <div className={'card card1 ' + props.carddark} style={dynoGrid}>
-    <button className={'emojiButton '+emojiButton} onClick={emojiToggle}>Toggle Emoji</button>
-    <img src={emoji} className= 'image1' alt='logo'/>
-    <p className="card1-into">Hi There! I am Youssef Ibrahim.  I’m a <span>&lt;front-end web developer & designer/&gt;</span></p>
-
-</div>
-)}
+    <div className={'card card1 ' + props.carddark} style={dynoGrid}>
+      <button className={'emojiButton '+emojiButton} onClick={emojiToggle}>Toggle Emoji</button>
+      <img src={emoji} className= 'image1' alt='logo'/>
+      <p className="card1-into">Hi There! I am Youssef Ibrahim.  I’m a <span>&lt;front-end web developer & designer/&gt;</span>
+      </p>
+    </div>
+  )
+}
 export default Box1
