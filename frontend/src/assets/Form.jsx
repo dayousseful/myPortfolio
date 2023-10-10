@@ -6,7 +6,7 @@ import axios from 'axios'
 
 function Form(props){
   const currentstate = props.currentstate
-  let dynoGrid
+  let dynoGrid, inputColor
 
   if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '4/5', gridColumn: '3/5', opacity:'0.2'}
@@ -16,10 +16,14 @@ function Form(props){
     dynoGrid = {gridRow: '4/5', gridColumn: '3/5', opacity:'0.2'}
   }else if(currentstate === "All" && window.innerWidth> 1000){
     dynoGrid = {gridRow: '4/5', gridColumn: '3/5'}
-  }else if(currentstate === "All" || currentstate === "Projects" && window.innerWidth< 1000){
+  }else if(currentstate === "All" || currentstate === "Projects" && window.innerWidth< 1000 && window.innerWidth> 800 ){
     dynoGrid = {gridRow: '3/5', gridColumn: '1/3'}
-  }else if(currentstate === "About" || currentstate === "Projects" || currentstate === "Media" && window.innerWidth< 1000){
-    dynoGrid = {gridRow: '3/5', gridColumn: '1/3', opacity:'0.1'}
+  }else if(currentstate === "About" || currentstate === "Media" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '3/5', gridColumn: '1/3', opacity:'0.2'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000 && window.innerWidth> 800){
+    dynoGrid = {gridRow: '3/5', gridColumn: '1/3', opacity:'0.2'}
+  }else if(currentstate === "Projects" && window.innerWidth< 800){
+    dynoGrid = {order:'-1'}
   }
 
   const [name, setName] = useState('')
@@ -38,6 +42,8 @@ function Form(props){
     event.preventDefault()
     axiosPostData()
   }
+  props.colorState ?  inputColor={color:'white'}: inputColor={}
+
 
   if (!feedback){
     return(
@@ -46,9 +52,9 @@ function Form(props){
         <div><h2 className='formHeader'> Shall I keep you in the loop?</h2>
         <p className='formParagraph'>Fill out the form to get in touch</p></div>
         <form  className='inputContatiner' onSubmit={handleSubmit}>
-          <div><input className='inputBox'placeholder="Name" type='text' value={name} onChange={(e) => setName(e.target.value)}/></div>
+          <div><input className='inputBox'placeholder="Name" type='text' value={name} onChange={(e) => setName(e.target.value)} style={inputColor}/></div>
           <div><input className='inputBox' placeholder="Email address" type='email' value={email} 
-          onChange={(e) => setEmail(e.target.value)} /></div>
+          onChange={(e) => setEmail(e.target.value)} style={inputColor}/></div>
           {feedback}
           <div className='buttonDiv'><button className='submitButton'>Submit</button></div>
         </form>

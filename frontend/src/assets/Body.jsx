@@ -29,7 +29,7 @@ function Body(props) {
         <Spotify carddark={cardDark} currentstate={props.currentstate}/>
         <GitHub carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         <MapBox carddark={cardDark} currentstate={props.currentstate}/>
-        <Form carddark={cardDark} currentstate={props.currentstate}/>
+        <Form carddark={cardDark} currentstate={props.currentstate} colorState={props.colorState}/>
         </div>
     )
 }

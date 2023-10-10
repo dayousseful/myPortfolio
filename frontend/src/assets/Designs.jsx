@@ -17,12 +17,14 @@ function Designs(props){
     dynoGrid = {gridArea: '3/1/4/3' , opacity:'0.1'}
   } else if(currentstate === "Media" && window.innerWidth> 1000){
     dynoGrid = {gridArea:'1 / 1 / 2 / 3'}
-  }else if(currentstate === "All" || currentstate === "Media" && window.innerWidth< 1000){
+  }else if(currentstate === "All" || currentstate === "Media" && window.innerWidth< 1000 && window.innerWidth> 800){
     dynoGrid = {gridRow: '2/3', gridColumn: '3/5'}
   }else if(currentstate === "About" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '4/5', gridColumn: '3/5', opacity:'0.1'}
   }else if(currentstate === "Projects" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '5/6', gridColumn: '3/5', opacity:'0.1'}
+  }else if(currentstate === "Media" && window.innerWidth< 800){
+    dynoGrid = {order:'-1'}
   }
 
   const images = [
