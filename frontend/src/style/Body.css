@@ -414,7 +414,7 @@ margin-bottom: 77px;
 }
 .submitButton:hover{
     box-shadow: rgb(48, 54, 61) 0px 0px 0px 4px;
-    color: white;
+    /* color: white; */
 }
 .celebEmoji{
     max-width: 190px;
@@ -440,7 +440,7 @@ margin-bottom: 77px;
     font-size: 16px;
     letter-spacing: 0.25px;
     font-weight: 400;
-    color: rgb(240, 242, 248);
+    /* color: rgb(240, 242, 248); */
     margin-bottom: 8px;
     border-radius: 0px;
 }
@@ -477,6 +477,15 @@ margin-bottom: 77px;
         width: 170px;
         height: 180px;
     }
+    .navDivAboutme {
+        top: 51px;
+    }
+    .spotifyImg {
+        width: 150px;
+        height: 150px;}
+    .aboutmeParaDiv {
+        margin-bottom: 23px;
+    }
 }
 @media screen and (min-width: 541px)and (max-width: 800px) {
     .container{
@@ -490,6 +499,18 @@ margin-bottom: 77px;
         width: 184px;
         height: 180px;
     }
+    .aboutmeParaDiv{
+        margin-bottom: 42px;
+        font-size: 16px;
+    }
+    .navDivAboutme{
+        top: 32px;
+    }
+    .spotifyImg {
+        width: 150px;
+        height: 150px;
+    }
+
 }
 @media screen and (min-width: 800px)and (max-width: 1000px) {
    .container{
@@ -537,7 +558,22 @@ margin-bottom: 77px;
         width: 150px;
         height: 150px;
     }
-   
+    .formContainerDiv{
+        font-size: 21px;
+        text-align: center;
+    }
+   .navDivAboutme{
+    top: 15px;
+   }
+   .aboutmeParaDiv {
+    margin-bottom: 10px;
+    font-size: 11px;
+    }
+    .progIcons > svg{
+        width: 25px;
+        height: 25px;
+    }
+
 }
 @media screen and (min-width: 1000px)and (max-width: 1200px) {
     .container{
@@ -551,14 +587,36 @@ margin-bottom: 77px;
         width: -webkit-fill-available;
         padding-top: 0.5rem;
     }
-    
     .designs > img {
         width: 23rem;
     }
     .arrow_right, .arrow_left{
         top: auto;
     }
-
+    .aboutmeParaDiv {
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .navDivAboutme{
+        top: 50px;
+    }
+    .progIcons > svg {
+        width: 30px;
+        height: 30px;
+    }
+    .trackName > p {
+        max-width: 11.5rem;
+    }
+    .spotifyImg {
+        width: 175px;
+        height: 175px;
+    }
+    .formContainerDiv{
+       font-size: 25px;
+    }
+    .Icons {
+        width: 135px;
+    }
 }
 
 @media screen and (max-width: 800px) {

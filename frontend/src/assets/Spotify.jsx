@@ -25,9 +25,11 @@ function Spotify(props){
   }else if(currentstate === "All" && window.innerWidth< 1000){
     dynoGrid = {gridRow: '5/7', gridColumn: '3/6'}
   }else if(currentstate === "About" || currentstate === "Media" && window.innerWidth< 1000){
-    dynoGrid = {gridRow: '5/7', gridColumn: '3/6', opacity:'0.1'}
-  }else if(currentstate === "Projects" && window.innerWidth< 1000){
+    dynoGrid = {gridRow: '5/7', gridColumn: '3/6', opacity:'0.2'}
+  }else if(currentstate === "Projects" && window.innerWidth< 1000 && window.innerWidth>800){
     dynoGrid = {gridRow: '1/4', gridColumn: '3/5'}
+  }else if(currentstate === "Projects" && window.innerWidth< 800){
+    dynoGrid = {order:'-1'}
   }
   
   useEffect(() => {
