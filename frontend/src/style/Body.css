@@ -176,18 +176,26 @@ a{
     padding-left: 1rem;
     position: relative;
 }
+.borderFix{
+    border:  2px solid transparent;
+}
 .aboutmeParagraph {
     line-height: 18px;
 }
 .aboutmeParaDiv{
-margin-bottom: 77px;
+    margin-bottom: 20px;
 }
+.aboutproParaDiv{
+    margin-bottom: 22px;
+}
+
 .aboutmeParagraph > span{
     color: #FFB800;
 }
 .navDivAboutme{   
     position: absolute;
-    top: 66px;}
+    top: 55px;}
+
 .aboutmeNavBarDark{
     position: relative;
     display: flex;
@@ -464,6 +472,25 @@ margin-bottom: 77px;
         width: 167px;
         height: 167px;
     }
+    .navDivAboutme {
+        top: 20px;
+    }
+    .aboutmeParaDiv{
+        margin-bottom: 23px;
+    }
+    .aboutproParaDiv {
+        margin-bottom: 2px;
+    }
+    .aboutmeParagraph{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .spotifyImg {
+        width: 150px;
+        height: 150px;
+    }
+
+
 }
 @media screen and (min-width: 401px)and (max-width: 540px) {
     .container{
@@ -478,16 +505,22 @@ margin-bottom: 77px;
         height: 180px;
     }
     .navDivAboutme {
-        top: 51px;
+        top: 20px;
     }
     .spotifyImg {
         width: 150px;
         height: 150px;}
-    .aboutmeParaDiv {
+    .aboutmeParaDiv{
         margin-bottom: 23px;
     }
+    .aboutproParaDiv {
+        margin-bottom: 2px;
+    }
+    .aboutmeParagraph{
+        font-size: 15px;
+    }
 }
-@media screen and (min-width: 541px)and (max-width: 800px) {
+@media screen and (min-width: 541px)and (max-width: 799px) {
     .container{
         max-width: 590px;
     }
@@ -500,9 +533,14 @@ margin-bottom: 77px;
         height: 180px;
     }
     .aboutmeParaDiv{
-        margin-bottom: 42px;
-        font-size: 16px;
+        margin-bottom: 39px;
+        font-size: 15px;
     }
+    .aboutproParaDiv{
+        margin-bottom: 8px;
+        font-size: 15px;
+    }
+
     .navDivAboutme{
         top: 32px;
     }
@@ -562,17 +600,24 @@ margin-bottom: 77px;
         font-size: 21px;
         text-align: center;
     }
-   .navDivAboutme{
-    top: 15px;
-   }
-   .aboutmeParaDiv {
-    margin-bottom: 10px;
-    font-size: 11px;
+    .navDivAboutme{
+        top: 15px;
+    }
+    .aboutmeParaDiv{
+        margin-bottom: 17px;
+        font-size: 11px;
+    }
+    .aboutproParaDiv {
+        margin-bottom: 4px;
+        font-size: 11px;
     }
     .progIcons > svg{
         width: 25px;
         height: 25px;
     }
+    .aboutmeParagraph {
+        line-height: 14px;
+    }    
 
 }
 @media screen and (min-width: 1000px)and (max-width: 1200px) {
@@ -593,12 +638,16 @@ margin-bottom: 77px;
     .arrow_right, .arrow_left{
         top: auto;
     }
-    .aboutmeParaDiv {
+    .aboutmeParaDiv  {
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+    .aboutproParaDiv{
         margin-bottom: 20px;
         font-size: 13px;
     }
     .navDivAboutme{
-        top: 50px;
+        top: 25px;
     }
     .progIcons > svg {
         width: 30px;
@@ -616,6 +665,9 @@ margin-bottom: 77px;
     }
     .Icons {
         width: 135px;
+    }
+    .aboutmeParagraph {
+        line-height: 15px;
     }
 }
 
