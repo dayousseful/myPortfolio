@@ -6,7 +6,7 @@ import { useState } from 'react'
 function AboutMe(props){
   const [highlight, setHighlight] = useState(true)
   const currentstate = props.currentstate
-  let dynoGrid, highlightStyle, aboutmeHighlight, aboutNavbar
+  let dynoGrid, highlightStyle, aboutmeHighlight, aboutNavbar, borderFix
   if (currentstate === "Media" && window.innerWidth> 1000) {
     dynoGrid = {gridRow: '2/4', gridColumn: '4/5', opacity:'0.2'}
   } else if(currentstate === "About" && window.innerWidth> 1000) {
@@ -36,15 +36,17 @@ function AboutMe(props){
 
   if (props.colorState === false){
     aboutNavbar = 'aboutmeNavBar'
+    borderFix = ' borderFix'
     aboutmeHighlight = 'aboutmeHighlight'
   } else{
     aboutNavbar = 'aboutmeNavBarDark'
     aboutmeHighlight = 'aboutmeHighlightDark'
+    borderFix = ''
   }
 
   if (highlight){ 
     return(
-      <div className={'card aboutMe'+props.carddark} style={dynoGrid}>
+      <div className={'card aboutMe'+ borderFix + props.carddark} style={dynoGrid}>
         <div className='navDivAboutme' >
           <nav className={aboutNavbar}>
           <div className={aboutmeHighlight} style={highlightStyle}></div>
@@ -54,8 +56,8 @@ function AboutMe(props){
         </div>
           <div className='aboutmeParaDiv'><p className='aboutmeParagraph'>Hello, I graduated from the university of Central Florida with a degree in <span>Web Design & Social Platforms</span>. It’s a fusion of designing and developing for web & mobile applications. I like Music, Art, Football (soccer), and Tech.
           </p><br/>
-          <p className='aboutmeParagraph'>My obsession with web design grows because it gives me the privileged to express my ideas and help other people communicate their products and services.</p><br/>
-          <p className='aboutmeParagraph'>My obsession with web design grows because it gives me the privileged to express my ideas.</p>
+          <p className='aboutmeParagraph'>I view web design through the concept of immersive architecture. This consists of three main parts: creating aesthetically pleasing designs, delivering a seamless user experience, and maintaining complex functionality of the components of the platform</p><br/>
+          <p className='aboutmeParagraph'>My obsession with web design grows because it gives me the privilege to express my ideas and help other people communicate their products and services.</p>
           </div>
       </div>
     )
@@ -69,14 +71,10 @@ function AboutMe(props){
           <div className='filter filterProject' style={{zIndex:1}} onClick={inspohighlightToggle}>The Project</div>
         </nav>
         </div>
-        <div className='aboutmeParaDiv'>
-        <p className='aboutmeParagraph'>I always wanted to created new projects that can help me show my skills and passion without hitting analysis paralysis, and thats where the inspiration of this project came from. It started with breaking the website into small sections, then filling it up piece by piece.
+        <div className='aboutproParaDiv'>
+        <p className='aboutmeParagraph'>I alwayes wanted to delevop new projects that allow me to show my skills and passion without hitting analysis paralysis, and thats where the inspiration of this project came from. 
+        </p><br/><p className='aboutmeParagraph'>Creating a wireframe helped me put things into perspective including the content, the page structure and layout, the app&apos;s functions. Then, by adding more colors, styles, graphics, and typography, I was able to turn this wireframe into a prototype. With the prototype and breaking content into smaller sections, I was able to start the development process and work my way up to deployment.
         </p>
-        <br/>
-        <p className='aboutmeParagraph'> 
-        I always wanted to created new projects that can help me show my skills and passion without hitting analysis paralysis.
-        </p>
-        
         <div className='progIcons'>
           <br/>
         <p className='aboutmeParagraph'>This project was buit with</p>
