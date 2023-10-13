@@ -35,7 +35,7 @@ function Header(props) {
   return (
     <div className='Header'>
       <div className='header__logo'>
-      <img src={'src/images/logo.png'} className= 'image1' alt='logo'/>
+      <img src={'images/logo.png'} className= 'image1' alt='logo'/>
       </div>
       <nav className={filterMenu}> 
        <div className={filterHighlight} style={Highlighted} ></div>

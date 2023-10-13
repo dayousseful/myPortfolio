@@ -28,11 +28,11 @@ function Designs(props){
   }
 
   const images = [
-    {url : 'src/images/image1.jpeg', title:'image1'},
-    {url : 'src/images/image2.jpeg', title:'image2'},
-    {url : 'src/images/image3.jpeg', title:'image3'},
-    {url : 'src/images/image4.jpeg', title:'image4'},
-    {url : 'src/images/image5.jpeg', title:'image5'}
+    {url : 'images/image1.jpeg', title:'image1'},
+    {url : 'images/image2.jpeg', title:'image2'},
+    {url : 'images/image3.jpeg', title:'image3'},
+    {url : 'images/image4.jpeg', title:'image4'},
+    {url : 'images/image5.jpeg', title:'image5'}
   ]
   
   let Icon_filler
