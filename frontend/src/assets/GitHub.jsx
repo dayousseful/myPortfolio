@@ -25,7 +25,7 @@ function GitHub(props){
     dynoGrid = {order:'-1'}
   }
 
-  if (props.colorState === true){ iconState ='src/images/github-mark-white.svg'} else {iconState ='src/images/github-mark.svg'}
+  if (props.colorState === true){ iconState ='images/github-mark-white.svg'} else {iconState ='images/github-mark.svg'}
 
   return(
     <div className={'card Github'+props.carddark} style={dynoGrid}>

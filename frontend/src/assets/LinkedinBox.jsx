@@ -25,7 +25,7 @@ function LinkedinBox(props){
   return(
     <div className={'card LinkedinBox'+props.carddark} style={dynoGrid}>
       <a href='https://www.linkedin.com/in/youssef-ibrahim7/' target="_blank" rel="noopener" >
-        <img src={'frontend/public/images/linkedin-white.svg'} className='Icons' alt='Linkedin'/>
+        <img src={'images/linkedin-white.svg'} className='Icons' alt='Linkedin'/>
       </a>
     </div>
   )

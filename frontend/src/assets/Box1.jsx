@@ -27,7 +27,7 @@ function Box1(props){
 
   props.colorState ? emojiButton ='emoji-b-dark' : emojiButton = ''
   
-  emojistate ? emoji = ('src/images/emoji.png') :emoji = ('src/images/emoji 2.png')
+  emojistate ? emoji = ('/images/emoji.png') : emoji = ('images/emoji 2.png')
   function emojiToggle(){setEmojistate(prevEmojistate => (!prevEmojistate))}
 
   return(

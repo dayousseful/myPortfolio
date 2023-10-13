@@ -69,7 +69,7 @@ function Spotify(props){
 
       <div>
         <div>
-          <img src={'src/images/Spotify-Icon.svg'} className='spotifyIcon'   alt='Spotify Icon'/>
+          <img src={'images/Spotify-Icon.svg'} className='spotifyIcon'   alt='Spotify Icon'/>
         </div>
         <div style={{margin:'7px'}} className='recentlyplayedContanier'>
           <div className='animationContainer'>

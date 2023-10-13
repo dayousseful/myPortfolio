@@ -26,7 +26,7 @@ function ResumeBox(props){
   return(
     <div className={'card resumeBox '+ props.carddark} style={dynoGrid}>
         <a href='https://acrobat.adobe.com/link/track?uri=urn%3Aaaid%3Ascds%3AUS%3Af9adc54e-6557-3751-be04-5eb1d4aba826&viewer%21megaVerb=group-discover' target="_blank" rel="noopener">
-        <div><img src={'src/images/resume_icon.png'} className='resume_icon' alt='Resume'/></div>
+        <div><img src={'images/resume_icon.png'} className='resume_icon' alt='Resume'/></div>
         </a>
     </div>
   )

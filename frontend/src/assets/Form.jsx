@@ -64,7 +64,7 @@ function Form(props){
   }else{
     return(
     <div className={'card formContainer'+props.carddark} style={dynoGrid}>
-      <img src='src/images/celebration.png' className= 'celebEmoji' alt='Celebration'/>
+      <img src='images/celebration.png' className= 'celebEmoji' alt='Celebration'/>
     </div>)
   }
   
