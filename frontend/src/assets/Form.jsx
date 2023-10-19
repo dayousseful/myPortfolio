@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM  from 'react-dom/client'
 import '../style/Body.css'
-import { useState, useEffect} from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 
 function Form(props){
@@ -35,15 +35,14 @@ function Form(props){
       name: name,
       email: email
     }
-    await axios.post('http://localhost:8080/form', postData)
+    await axios.post('https://myprotfolio-backend-80up.onrender.com/form', postData)
     .then(res => setFeedback(res.data))
   }
   const handleSubmit = (event) => {
     event.preventDefault()
     axiosPostData()
   }
-  props.colorState ?  inputColor={color:'white'}: inputColor={}
-
+  props.colorState ? inputColor={color:'white'}: inputColor={}
 
   if (!feedback){
     return(
@@ -56,7 +55,7 @@ function Form(props){
           <div><input className='inputBox' placeholder="Email address" type='email' value={email} 
           onChange={(e) => setEmail(e.target.value)} style={inputColor}/></div>
           {feedback}
-          <div className='buttonDiv'><button className='submitButton'>Submit</button></div>
+          <div className='buttonDiv'><button type='submit' className='submitButton'>Submit</button></div>
         </form>
         </div>
       </div>

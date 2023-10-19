@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "https://youssefhamdy.com",
   "dependencies": {
     "@react-google-maps/api": "^2.18.1",
     "axios": "^1.5.1",
