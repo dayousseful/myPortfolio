@@ -10,10 +10,11 @@ require('dotenv/config')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
-const corsOptions = {
-    credentials: true,
-    optionSuccessStatus: 200
-}
+// const corsOptions = {
+//     origin: '*',
+//     credentials: true,
+//     optionSuccessStatus: 200
+// }
 
 app.use((req, res, next) => {
     res.setHeader(
@@ -34,7 +35,7 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Max-Age", 7200);
     next();
   });
-app.use(cors(corsOptions))
+app.use(cors())
 app.use('/', router)
 
 
