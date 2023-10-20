@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "proxy": "https://youssefhamdy.com",
+  "proxy": "https://myprotfolio-backend-80up.onrender.com",
   "dependencies": {
     "@react-google-maps/api": "^2.18.1",
     "axios": "^1.5.1",
