@@ -17,16 +17,7 @@ const corsOptions = {
   optionSuccessStatus: 200
 }
 
-app.post('/form', cors(corsOptions), async(req,res) => {
-  const {name, email} = req.body
-  const userData = {name: name, email : email}
-  const newUser = new schemas.Users(userData)
-  const saveUser = await newUser.save()
-  if (saveUser){
-    res.send(true)
-  }
-  res.end()
-})
+
 
 
 app.use(cors(corsOptions))
@@ -38,7 +29,16 @@ mongoose.connect(process.env.DB_URI, dbOptions)
 .then(()=> console.log('DB connected!'))
 .catch(err => console.log(err))
 
-
+app.post('/form', cors(corsOptions), async(req,res) => {
+  const {name, email} = req.body
+  const userData = {name: name, email : email}
+  const newUser = new schemas.Users(userData)
+  const saveUser = await newUser.save()
+  if (saveUser){
+    res.send(true)
+  }
+  res.end()
+})
 
 const port = process.env.PORT
 const server = app.listen(port, () => {
