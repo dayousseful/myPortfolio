@@ -5,7 +5,7 @@ const schemas = require('../models/Schemas')
 
 console.log('running')
 
-router.post('/form', async(req,res) => {
+router.post('/form', cors(corsOptions), async(req,res) => {
   const {name, email} = req.body
   const userData = {name: name, email : email}
   const newUser = new schemas.Users(userData)
