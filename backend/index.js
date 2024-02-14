@@ -12,12 +12,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 const corsOptions = {
-  origin: 'https://youssefhamdy.com',
+  origin: ['https://youssefhamdy.com','http://localhost:5173'],
   credentials: true,
   optionSuccessStatus: 200
 }
-
-
 
 
 app.use(cors(corsOptions))

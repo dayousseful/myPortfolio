@@ -67,11 +67,11 @@ function Spotify(props){
         </a>
       </div>
 
-      <div>
-        <div>
-          <img src={'images/Spotify-Icon.svg'} className='spotifyIcon'   alt='Spotify Icon'/>
+      <div style={{width:'80%'}}>
+        <div >
+          <img src={'images/Spotify-Logo.wine.svg'} className='spotifyIcon'   alt='Spotify Icon'/>
         </div>
-        <div style={{margin:'7px'}} className='recentlyplayedContanier'>
+        <div className='recentlyplayedContanier'>
           <div className='animationContainer'>
             <div className='spotifyAnimator1'></div>
             <div className='spotifyAnimator2'></div>
@@ -80,11 +80,11 @@ function Spotify(props){
 
           <div><p className='recentlyPlayed'>Recently Played</p></div>
         </div>
-        <div style={{margin:'5px'}}>
+        <div>
           <a className='trackName' href={result.songUrl} target="_blank" rel="noopener">
           <p>{result.song}</p></a>
         </div>
-        <div style={{margin:'5px'}}><p className='artistName'>{result.artist}</p>
+        <div><p className='artistName'>{result.artist}</p>
         </div>
       </div>
     </div>
